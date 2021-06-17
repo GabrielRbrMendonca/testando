@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+
+<body>
+    <header class="container-fluid container header">
+        <img src="imagens/logo.png" class="logo">
+
+        <div class="container_nav">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times-circle"></i>
+            </label>
+
+            <nav class="nav menu1">
+                <strong>CalControl</strong>
+                
+                <a class="nav-link active" href="#">IMC</a>
+                <a class="nav-link" href="#">Dietas</a>
+                <a class="nav-link" href="#">Exercícios</a>
+                <a class="nav-link" id="log_out" href="#">Logout</a>
+
+
+                
+                     
+            </nav>
+            <div class="nome2"><strong>CalControl</strong></div>
+        </div>
+
+    </header>
+
+    
+
+    <main class="container main">
+        <div class="lancamentos">
+            <h1>Primeiros Passos</h1>
+            <section class="row">
+                
+                <div class="col-12 carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <section class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/B2WnsrkbUoc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                                    <h2>Entenda IMC</h2>
+                                    <p>O índice de massa corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no peso ideal. Desenvolvido pelo polímata Lambert Quételet no fim do século XIX, trata-se de um método fácil e rápido para a avaliação do nível de gordura de cada pessoa, sendo, por isso, um preditor internacional de obesidade adotado pela Organização Mundial da Saúde (OMS).</p>
+                                </div>
+                            </section>
+                          </div>
+                          <div class="carousel-item">
+                            <section class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Mbyp3_vIPKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                                    <h2>Obesidade</h2>
+                                    <p>A obesidade é uma doença cônica, definida pela Organização Mundial de Saúde (OMS) como o acúmulo anormal ou excessivo de gordura no corpo. O tratamento da obesidade precisa ser de longa duração. Para além do controle, é preciso evitar outras complicações que aparecem com o tempo e resultam em um menor expectativa de vida.</p>
+                                    
+                                </div>
+                            </section>
+                          </div>
+                          <div class="carousel-item">
+                            <selection class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xdOGpst3q6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                                    <h2>Dietas x Exercícios</h2>
+                                    <p>O erro de muitas pessoas é acreditar que basta comer bem ou somente fazer exercícios para manutenção da sáude. Na verdade, os dois fatores precisam trabalhar em conjunto somados à um descanço adequado para que as chance de doenças relacianadas ao peso e ao sistema cardiorrespiratório sejam minimizadas.</p>
+                                </div>
+                            </selection>
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="container" id='imc_cont'>
+            <div class="row">
+                <div class= "title"> Calculadora - IMC </div>
+                <div class=" col-lg-6 col-md-12" >
+                    
+                    <div class="input">
+                        <label>Nome:</label>
+                        <input type="text" id='nome' name="nome">
+                    </div>
+                    <div class="input">
+                        <label>Altura:</label>
+                        <input type="number" id='altura'>
+                    </div>
+                    <div class="input">
+                        <label>Peso:</label>
+                        <input type="number" id='peso'>
+                    </div>
+                    <button id='calcular'>Calcular</button>
+                </div>
+                <div class=" col-lg-6 col-md-12" >
+                    <div class="result" id='resultado'></div>
+                </div>
+            </div>
+          </div>
+
+
+
+        <h1 class="h1">Planejamentos</h1>
+        <div class="row">
+            <div class=" col-md-12 col-lg-8">
+                <div id="news-slider" class="owl-carousel">
+                    <div class="post-slide">
+                        <div class="post-img">
+                            <a href="#">
+                                <img src="imagens/P1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="post-review">
+                            <h3 class="post-title"><a href="#">Dietas</a></h3>
+                           
+                            <p class="post-description">Aqui você irá aprender a como montar sua própia dieta para atender seu gasto calórico diário. Uma boa alternativa para quem não pode se consultar com um profissional.</p>
+                           
+                        </div>
+                    </div>
+                    <div class="post-slide">
+                        <div class="post-img">
+                            <a href="#">
+                                <img src="imagens/P2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="post-review">
+                            <h3 class="post-title"><a href="#">Exercicíos</a></h3>
+                            <p class="post-description">Aprenda sobre a execução de diversos exercicios aeróbicos, os quais todas as pessoas deveriam praticar um pouco para a manutenção da saúde.</p>
+                               
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                <div class="grid_cor3">
+                    <h2>Sobre</h2>
+                    <p>CalControl é um site feito por dois alunos do primeiro período do curso Engenharia de Software da universidade PUC Minas, com o intuito de auxiliar um pouco as pessoas a buscarem uma boa saúde física. As dicas que daremos aqui não substituem uma consulta com um profissional da área, mas foram feitas através de pesquisas em fontes confiáveis e com certeza podem ajudar aqueles que não possuem uma alternativa melhor para este fim.
+                    </p>                                   
+                    <h3>Contate-nos</h3>
+                </div>
+            </div>            
+        </div>  
+    <hr>
+ </section>
+    </main>
+    <footer class="container-fluid container footer ">
+        <section class="row">
+            <div class="col-9">
+                <p>Copyright 2021 - Disciplina de Densenvolvimento de Interfaces Web</p>                
+            </div>
+            <div class="col-3">
+                <img src="imagens/logonet.png" alt="">
+            </div>
+        </section>
+    </footer>
+
+<script src="login.js"></script>
+    <script>       
+        if (!usuarioCorrente.login) {
+            window.location.href = INTRO_URL;
+        }
+        function initPage() {
+            document.getElementById('log_out').addEventListener('click', logoutUser);
+        }
+        window.addEventListener('load', initPage);
+        
+        
+    </script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+
+</html>

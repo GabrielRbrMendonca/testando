@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Login / Sign Up Form</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <form class="form" id="login-form">
+            <h1 class="form__title">Login</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" id="username" class="form__input" autofocus placeholder="Usuário">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" id="password" class="form__input" autofocus placeholder="Senha">
+                <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" type="submit">Conectar</button>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkCreateAccount">Não possuí uma conta? Registrar</a>
+            </p>
+        </form>
+        <form class="form form--hidden" id="createAccount">
+            <h1 class="form__title">Registro</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" name="user" id="txt_login" class="form__input" autofocus placeholder="Usuário">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="text" id="txt_email" class="form__input" autofocus placeholder="Email(opcional)">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" id="txt_senha" class="form__input" autofocus placeholder="Senha">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" id="txt_senha2" class="form__input" autofocus placeholder="Confirme a senha">
+                <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" id="btn_salvar" type="submit">Registrar</button>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkLogin">Já possuí uma conta? Entrar</a>
+            </p>
+        </form>
+    </div>
+
+
+
+
+
+    <script>
+        function processaFormLogin (event) {                
+                event.preventDefault ();
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+                resultadoLogin = loginUser (username, password);
+                if (resultadoLogin) {
+                    window.location.href = 'index.html';
+                }
+                else {alert ('Usuário ou senha incorretos');
+                }
+        }
+        function salvaLogin (event) {
+            event.preventDefault ();
+            let login  = document.getElementById('txt_login').value;
+            let loglen  = document.getElementsByTagName('user').lenght;
+            let email  = document.getElementById('txt_email').value;
+            let senha  = document.getElementById('txt_senha').value;
+            let senha2 = document.getElementById('txt_senha2').value;
+            if (senha != senha2) {
+                alert ('As senhas informadas não conferem.');
+                return
+            }
+            if (senha === "") {
+                alert ('Insire uma senha válida.');
+                return
+            }
+            if (login === "") {
+                alert ('Insire um nome de usuário válido.');
+                return
+            }
+            if (loglen < 3) {
+                alert ('Insire um nome de usuário válido.');
+                return
+            }
+            addUser (login, senha, email);
+            alert ('Usuário salvo com sucesso. Proceda com o login para ');
+            
+        }
+        document.getElementById ('login-form').addEventListener ('submit', processaFormLogin);
+        document.getElementById ('btn_salvar').addEventListener ('click', salvaLogin);        
+    </script>
+    <script src="login.js"></script>
+</body>
